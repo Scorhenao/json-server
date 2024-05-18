@@ -1,0 +1,3 @@
+crear un grid de cards con bootstrap
+exportar e importar
+exportar index function a services para datos
