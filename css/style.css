@@ -1,0 +1,13 @@
+table {
+    margin: auto;
+}
+
+thead,
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    margin: 10px 10px 10px 10px;
+}
