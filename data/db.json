@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+        {"id": 1, "nombre":"Juan", "apellido":"Marin", "clan":"Juan", "edad":25},
+        {"id": 2, "nombre":"Pablo", "apellido":"Juan", "clan":"Juan", "edad":24},
+        {"id": 3, "nombre":"David", "apellido":"Juan", "clan":"Juan", "edad":26},
+        {"id": 4, "nombre":"Cristo", "apellido":"Rey", "clan":"Juan", "edad":23}
+    ]
+
+}
+
