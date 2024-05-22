@@ -1,10 +1,31 @@
+import { getUsuarios, getUsuarioById, agregarUsuarios } from './services/service.js';
+
+const usuarios = await getUsuarios();
+console.log(usuarios);
+
+const usuario = await getUsuarioById(1);//lit accediendo a un usuario
+console.log(usuario);
+
+//manipulacion de dom
+const dtoUsuario = {
+    nombre: "",
+    apellido:"",
+    clan: "",
+    edad: 25
+}
+
+const btnAgregar = document.getElementById('agregar');
+
+btnAgregar.addEventListener('click', async () => {
+    await agregarUsuarios(dtoUsuario);
+});
 
 async function rederUsers () {
     const usuarios = await getUsuarios();
     const populateTableBody = (data) =>{
         const tbody = document.getElementById('tbody');
         tbody.innerHTML ='';
-    
+        
         data.forEach(item =>{
             const row = document.createElement('tr');
             row.className = "table-dark";
@@ -13,14 +34,13 @@ async function rederUsers () {
                 cell.textContent = value;
                 row.appendChild(cell);
             });
-    
+            
             tbody.appendChild(row);
         });
     }
     populateTableBody(usuarios);
 }
 
-import { getUsuarios } from "./service";
 
 await rederUsers();
 //async siempre debe tener awais ci

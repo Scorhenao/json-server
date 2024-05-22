@@ -1,10 +1,67 @@
 {
-    "usuarios": [
-        {"id": 1, "nombre":"Juan", "apellido":"Marin", "clan":"Juan", "edad":25},
-        {"id": 2, "nombre":"Pablo", "apellido":"Juan", "clan":"Juan", "edad":24},
-        {"id": 3, "nombre":"David", "apellido":"Juan", "clan":"Juan", "edad":26},
-        {"id": 4, "nombre":"Cristo", "apellido":"Rey", "clan":"Juan", "edad":23}
-    ]
-
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "apellido": "Marin",
+      "clan": "Bezzos",
+      "edad": 25
+    },
+    {
+      "id": "2",
+      "nombre": "Pablo",
+      "apellido": "Juan",
+      "clan": "Bezzos",
+      "edad": 24
+    },
+    {
+      "id": "3",
+      "nombre": "David",
+      "apellido": "Rulfo",
+      "clan": "Bezzos",
+      "edad": 26
+    },
+    {
+      "id": "4",
+      "nombre": "Cristo",
+      "apellido": "Rey",
+      "clan": "Bezzos",
+      "edad": 23
+    },
+    {
+      "id": "7c45",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    },
+    {
+      "id": "ad01",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    },
+    {
+      "id": "496e",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    },
+    {
+      "id": "88b0",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    },
+    {
+      "id": "71a8",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    }
+  ]
 }
-
