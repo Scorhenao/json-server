@@ -1,10 +1,15 @@
-import { getUsuarios, getUsuarioById, agregarUsuarios } from './services/service.js';
+import { getUsuarios, getUsuarioById, agregarUsuarios, updateUser, deleteUser } from './services/userService.js';
+import { getPostsByUserId } from './services/postService.js';
+
 
 const usuarios = await getUsuarios();
 console.log(usuarios);
 
 const usuario = await getUsuarioById(1);//lit accediendo a un usuario
 console.log(usuario);
+
+const postByUser = await getPostsByUserId(1);
+console.log(postByUser);
 
 //manipulacion de dom
 const dtoUsuario = {
@@ -13,6 +18,8 @@ const dtoUsuario = {
     clan: "",
     edad: 25
 }
+
+console.log(dtoUsuario);
 
 const btnAgregar = document.getElementById('agregar');
 
@@ -34,6 +41,20 @@ async function rederUsers () {
                 cell.textContent = value;
                 row.appendChild(cell);
             });
+
+            const cellButtonActions = document.createElement('td');
+            const buttonEdit = document.createElement('button');
+            buttonEdit.textContent = "Edit";
+            buttonEdit.className = "btn btn-success";
+
+            const buttonDelete = document.createElement('button');
+            buttonDelete.textContent = "Delete";
+            buttonDelete.className = "btn btn-danger";
+
+            cellButtonActions.appendChild(buttonEdit);
+            cellButtonActions.appendChild(buttonDelete);
+
+            row.appendChild(cellButtonActions);
             
             tbody.appendChild(row);
         });

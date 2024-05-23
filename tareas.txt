@@ -1,4 +1,5 @@
 crear un grid de cards con bootstrap
 exportar e importar
 exportar index function a services para datos
-QUe es un DTO
+Que es un DTO
+hacer global los botones en el inde.js para usarlos

@@ -21,3 +21,21 @@ export async function agregarUsuarios(user){
         body: JSON.stringify(user)
     });
 }
+
+//actualizar 
+export async function updateUser(id,user) {
+    await fetch(`${URLbase}/users/${id}`,{
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+            },
+        body: JSON.stringify(user)
+    });
+}
+
+//borrar
+export async function deleteUser(id) {
+    await fetch(`${URLbase}/users/${id}`,{
+        method: 'DELETE'
+    });
+}
