@@ -11,6 +11,44 @@ console.log(usuario);
 const postByUser = await getPostsByUserId(1);
 console.log(postByUser);
 
+
+function updateUserDOM(params) {
+    const { id, nombre, apellido, email, password } = params;
+}
+
+function deleteUserDOM(params) {
+    const { id } = params;
+}
+
+
+
+const nombreInput = document.getElementById('nombre');
+const edadInput = document.getElementById('edad');
+const form = document.getElementById('formulario');
+console.log(form)
+
+let nombre;
+let edad; 
+
+form.addEventListener("submit", async(event) =>{
+    event.preventDefault()
+    nombre = nombreInput.value;
+    edad = edadInput.value;
+
+    localStorage.setItem("nombre", nombre);
+    localStorage.setItem("edad", edad);
+
+})
+
+localStorage.getItem("nombre");
+localStorage.getItem("edad");
+
+const pNombre = document.createElement('p');
+pNombre.textContent = localStorage.getItem("nombre");
+
+const pEdad = document.createElement('p');
+pEdad.textContent = localStorage.getItem("edad");
+
 //manipulacion de dom
 const dtoUsuario = {
     nombre: "",
@@ -19,13 +57,15 @@ const dtoUsuario = {
     edad: 25
 }
 
-console.log(dtoUsuario);
 
 const btnAgregar = document.getElementById('agregar');
-
 btnAgregar.addEventListener('click', async () => {
     await agregarUsuarios(dtoUsuario);
 });
+
+let cellButtonActions = null;
+let buttonEdit = null;
+let buttonDelete = null;
 
 async function rederUsers () {
     const usuarios = await getUsuarios();
@@ -45,7 +85,7 @@ async function rederUsers () {
             const cellButtonActions = document.createElement('td');
             const buttonEdit = document.createElement('button');
             buttonEdit.textContent = "Edit";
-            buttonEdit.className = "btn btn-success";
+            buttonEdit.className = "btn btn-warning";
 
             const buttonDelete = document.createElement('button');
             buttonDelete.textContent = "Delete";

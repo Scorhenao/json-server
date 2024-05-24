@@ -69,13 +69,42 @@
       "apellido": "",
       "clan": "",
       "edad": 25
+    },
+    {
+      "id": "4a1e",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
+    },
+    {
+      "id": "15e3",
+      "nombre": "",
+      "apellido": "",
+      "clan": "",
+      "edad": 25
     }
   ],
-
   "posts": [
-    {"id": "1", "text": "a comment about post 1", "userId": "1"},
-    {"id": "2", "text": "another comment about post 1", "userId": "1"},
-    {"id": "3", "text": "a commendcsdnt about post 1", "userId": "2"},
-    {"id": "4", "text": "another commendcsdnt about post 1", "userId": "3"}
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "text": "a commendcsdnt about post 1",
+      "userId": "2"
+    },
+    {
+      "id": "4",
+      "text": "another commendcsdnt about post 1",
+      "userId": "3"
+    }
   ]
 }
